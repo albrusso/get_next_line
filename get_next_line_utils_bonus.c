@@ -6,13 +6,13 @@
 /*   By: albrusso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 12:22:46 by albrusso          #+#    #+#             */
-/*   Updated: 2022/12/09 12:32:47 by albrusso         ###   ########.fr       */
+/*   Updated: 2024/03/19 13:59:33 by albrusso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-int	ft_strchr(const char *str, int c)
+int	ft_strchr_gnl(const char *str, int c)
 {
 	int		i;
 
@@ -25,7 +25,7 @@ int	ft_strchr(const char *str, int c)
 		return (0);
 }
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc_gnl(size_t count, size_t size)
 {
 	char		*memory;
 	size_t		i;
@@ -42,7 +42,7 @@ void	*ft_calloc(size_t count, size_t size)
 	return (memory);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin_gnl(char *s1, char *s2)
 {
 	int		i;
 	int		j;
@@ -56,7 +56,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	if (s2)
 		while (s2[j])
 			j++;
-	buffer = (char *)ft_calloc(i + j + 1, 1);
+	buffer = (char *)ft_calloc_gnl(i + j + 1, 1);
 	if (buffer == NULL)
 		return (NULL);
 	j = -1;
@@ -70,7 +70,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	return (buffer);
 }
 
-char	*ft_strdup(char *str)
+char	*ft_strdup_gnl(char *str)
 {
 	size_t		i;
 	size_t		j;
@@ -85,7 +85,7 @@ char	*ft_strdup(char *str)
 		i++;
 	while (str[j])
 		j++;
-	ptr = (char *)ft_calloc(j - i + 1, 1);
+	ptr = (char *)ft_calloc_gnl(j - i + 1, 1);
 	if (!ptr)
 		return (NULL);
 	k = 0;

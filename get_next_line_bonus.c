@@ -6,7 +6,7 @@
 /*   By: albrusso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 12:21:59 by albrusso          #+#    #+#             */
-/*   Updated: 2022/12/14 15:29:26 by albrusso         ###   ########.fr       */
+/*   Updated: 2024/03/19 14:00:25 by albrusso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_ret(char *str)
 		i++;
 	if (str[i] == '\n')
 		i++;
-	ret = (char *)ft_calloc(i + 1, 1);
+	ret = (char *)ft_calloc_gnl(i + 1, 1);
 	i = 0;
 	while (str[i] != '\n' && str[i])
 	{
@@ -43,17 +43,17 @@ char	*ft_read(int fd, char *str)
 
 	byte_read = 1;
 	if (!str)
-		str = ft_calloc(1, 1);
+		str = ft_calloc_gnl(1, 1);
 	while (byte_read > 0)
 	{
-		s = (char *)ft_calloc(BUFFER_SIZE + 1, 1);
+		s = (char *)ft_calloc_gnl(BUFFER_SIZE + 1, 1);
 		byte_read = read (fd, s, BUFFER_SIZE);
 		if (byte_read == -1)
 			return (NULL);
-		str = ft_strjoin(str, s);
+		str = ft_strjoin_gnl(str, s);
 		if (byte_read == 0)
 			break ;
-		if (ft_strchr(str, '\n') == 1)
+		if (ft_strchr_gnl(str, '\n') == 1)
 			break ;
 	}
 	if (str[0] == 0 && byte_read == 0)

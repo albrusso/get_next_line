@@ -6,7 +6,7 @@
 /*   By: albrusso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 12:39:35 by albrusso          #+#    #+#             */
-/*   Updated: 2022/12/06 18:01:47 by albrusso         ###   ########.fr       */
+/*   Updated: 2024/03/19 13:57:46 by albrusso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@
 
 char	*get_next_line(int fd);
 
-void	*ft_calloc(size_t count, size_t size);
+void	*ft_calloc_gnl(size_t count, size_t size);
 
-char	*ft_strjoin(char *s1, char *s2);
+char	*ft_strjoin_gnl(char *s1, char *s2);
 
-char	*ft_strdup(char *str);
+char	*ft_strdup_gnl(char *str);
 
-int		ft_strchr(const char *str, int c);
+int		ft_strchr_gnl(const char *str, int c);
 
 #endif
